@@ -25,17 +25,6 @@
     <p>part of TodoMVC</p>
   </div>
   
-  <script src="js/lib/jquery.min.js"></script>
-  <script src="js/lib/underscore-min.js"></script>
-  <script src="js/lib/backbone-min.js"></script>
-  <script src="js/lib/backbone.localStorage-min.js"></script>
-  <script src="js/model/todo.js"></script>
-  <script src="js/collection/todos.js"></script>
-  <script src="js/view/todos.js"></script>
-  <script src="js/view/app.js"></script>
-  <script src="js/router/router.js"></script>
-  <script src="js/app.js"></script>
-  
   <script type="text/template" id="item-template">
     <div class="view">
       <input class="toggle" type="checkbox" <%= completed? 'checked' : '' %>>
@@ -44,13 +33,12 @@
     </div>
     <input class="edit" value="<%- title %>">
   </script>
-  
   <script type="text/template" id="stats-template">
     <span id="todo-count"><strong><%= remaining %></strong>
     <%= remaining === 1 ? 'item' : 'items' %> left</span>
     <ul id="filters">
       <li>
-        <a class="selected" hef="#/>All</a>
+        <a class="selected" href="#/">All</a>
       </li>
       <li>
         <a href="#/active">Active</a>
@@ -58,9 +46,21 @@
       <li>
         <a href="#/completed">Completed</a>
       </li>
-      <% if (completed) { %>
-      <button id="clear-completed">Clear completed (<%= completed %>)</button>
-      <% } %>
+    </ul>
+    <% if (completed) { %>
+    <button id="clear-completed">Clear completed (<%= completed %>)</button>
+    <% } %>
   </script>
+
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/lib/underscore.js"></script>
+  <script src="js/lib/backbone.js"></script>
+  <script src="js/lib/backbone.localStorage.js"></script>
+  <script src="js/model/todo.js"></script>
+  <script src="js/collection/todos.js"></script>
+  <script src="js/view/todo.js"></script>
+  <script src="js/view/app.js"></script>
+  <script src="js/router/router.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

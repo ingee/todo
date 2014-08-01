@@ -1,12 +1,12 @@
 ﻿var app = app || {};
 
 app.Todo = Backbone.Model.extend({
-  default: {
+  defaults: {
     title: '',
     completed: false
   },
   
-  toogle: function(){
+  toggle: function(){
     this.save({
       completed: !this.get('completed')
     });
