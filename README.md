@@ -1,7 +1,7 @@
 # Todo Webapp
 
 ## UI Sketch
-<img src="todo-sketch.jpg" alt="UI Sketch" width="640" />
+<img src="todo-sketch.jpg" alt="UI Sketch" width="320" />
 
 ## Scaffolding
 ```
