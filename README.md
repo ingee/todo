@@ -3,6 +3,12 @@
 ## UI Sketch
 <img src="todo-sketch.jpg" alt="UI Sketch" width="320" />
 
+## Install libraries for unit-test
+```
+npm i -D @pinia/testing
+npm i -D lodash.merge
+```
+
 ## Scaffolding
 ```
 $ node -v
