@@ -11,6 +11,7 @@
     <ul>
       <li v-for="(todo, i) in store.todos" :key="i">
         {{ todo }}
+        <button type="button" data-test="rm-btn" @click="onRemove(i)"> X </button>
       </li>
     </ul>
   </div>
@@ -26,5 +27,9 @@ const store = useTodoStore()
 function onAdd () {
   store.addTodo(todo.value)
   todo.value = ""
+}
+
+function onRemove (id) {
+  store.rmTodo(id)
 }
 </script>
